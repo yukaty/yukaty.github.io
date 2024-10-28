@@ -1,0 +1,49 @@
+@use "bootstrap/scss/bootstrap";
+
+// Light Mode (Default)
+:root {
+    --primary: #1D3557;
+    --secondary: #FF6B6B;
+    --accent: #A8DADC;
+    --background: #F8FAFC;
+    --text: #333333;
+}
+
+// Dark Mode
+[data-theme="dark"] {
+    --primary: #457B9D;
+    --secondary: #E63946;
+    --accent: #F1FAEE;
+    --background: #1A202C;
+    --text: #FFFFFF;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.header {
+    background-color: var(--primary);
+    color: var(--text);
+}
+
+.button-primary {
+    background-color: var(--primary);
+    color: var(--text);
+    border: none;
+
+    &:hover {
+        background-color: scale(var(--primary), 10%);
+    }
+}
+
+.button-secondary {
+    background-color: var(--secondary);
+    color: var(--text);
+    border: none;
+
+    &:hover {
+        background-color: scale(var(--secondary), 10%);
+    }
+}
