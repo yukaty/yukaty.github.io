@@ -1,9 +1,20 @@
-import React from 'react';
+import { Container } from 'react-bootstrap';
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-white text-center py-3">
-      <p>&copy; {new Date().getFullYear()}</p>
+    <footer className="py-4 bg-dark text-light">
+      <Container>
+        <div className="text-center">
+          <small className="text-secondary">
+            © {new Date().getFullYear()} YukaT. All rights reserved.
+          </small>
+          <div className="mt-2">
+            <small className="text-secondary">
+              Built with React & Bootstrap
+            </small>
+          </div>
+        </div>
+      </Container>
     </footer>
   );
 };

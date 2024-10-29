@@ -18,25 +18,13 @@ const App = () => {
 
   return (
     <div>
-      <NavigationBar />
+      <NavigationBar theme={theme} toggleTheme={toggleTheme} />
       <Home />
       <About />
       <Projects />
       <Skills />
       <Contact />
       <Footer />
-      <div className="text-center my-3">
-      <button
-          onClick={toggleTheme}
-          className="btn"
-          style={{
-            backgroundColor: 'var(--secondary)',
-            color: 'var(--text)',
-          }}
-        >
-          {theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
-        </button>
-      </div>
     </div>
   );
 };

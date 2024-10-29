@@ -1,19 +1,26 @@
-import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
-const NavigationBar = () => {
+const NavigationBar = ({ theme, toggleTheme }) => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar expand="lg" fixed="top" className="py-3">
       <Container>
-        <Navbar.Brand href="#home">YukaT</Navbar.Brand>
+        <Navbar.Brand href="#home" className="fw-bold text-primary fs-2">
+          YukaT
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+          <Nav className="ms-auto">
             <Nav.Link href="#about">About</Nav.Link>
             <Nav.Link href="#projects">Projects</Nav.Link>
             <Nav.Link href="#skills">Skills</Nav.Link>
             <Nav.Link href="#contact">Contact</Nav.Link>
+            <button
+              onClick={toggleTheme}
+              className="theme-button"
+              aria-label="Toggle theme"
+            >
+              <i className={`bi ${theme === 'light' ? 'bi-sun' : 'bi-moon'}`}></i>
+            </button>
           </Nav>
         </Navbar.Collapse>
       </Container>

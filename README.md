@@ -11,11 +11,14 @@ My portfolio website with clean and modern technologies that is both responsive 
 - **Bootstrap**: Proven UI framework with pre-built components
 - **Sass**: Efficient CSS management
 
-## Local Setup
+## Setup
 ```bash
 # Install dependencies
 npm install
 
 # Start development server
 npm run dev
+
+# Deploy to GitHub Pages
+npm run deploy
 ```

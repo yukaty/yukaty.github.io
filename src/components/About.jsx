@@ -1,10 +1,21 @@
-import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const About = () => {
   return (
-    <section id="about" className="p-5 text-center">
-      <h2>About Me</h2>
-      <p>Full-stack developer with expertise in creating efficient and scalable applications.</p>
+    <section id="about" className="py-5">
+      <Container>
+        <h2 className="display-6 mb-4">About Me</h2>
+        <Row>
+          <Col lg={8}>
+            <p className="lead mb-4">
+              I'm a Full-stack Developer passionate about efficient, user-focused solutions.
+              I work across frontend and backend to create robust web apps with great user experiences.
+              My background includes financial systems, e-commerce, and solutions for businesses of all sizes.
+              Always learning 🤟🏻
+            </p>
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 };
