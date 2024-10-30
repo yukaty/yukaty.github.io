@@ -1,6 +1,6 @@
 # My Portfolio Website
 
-> 🚧 **Work in Progress**
+<!-- > 🚧 **Work in Progress** -->
 
 ## Overview
 My portfolio website with clean and modern technologies that is both responsive and high-performance.

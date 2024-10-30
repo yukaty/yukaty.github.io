@@ -16,10 +16,19 @@ const App = () => {
     document.documentElement.setAttribute('data-theme', newTheme);
   };
 
+  const handleNavClick = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const yOffset = -80;
+      const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div>
-      <NavigationBar theme={theme} toggleTheme={toggleTheme} />
-      <Home />
+      <NavigationBar handleNavClick={handleNavClick} theme={theme} toggleTheme={toggleTheme} />
+      <Home handleNavClick={handleNavClick} />
       <About />
       <Projects />
       <Skills />

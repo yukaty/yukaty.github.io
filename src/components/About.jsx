@@ -7,7 +7,7 @@ const About = () => {
         <h2 className="display-6 mb-4">About Me</h2>
         <Row>
           <Col lg={8}>
-            <p className="lead mb-4">
+            <p className="lead mx-2 mb-4">
               I'm a Full-stack Developer passionate about efficient, user-focused solutions.
               I work across frontend and backend to create robust web apps with great user experiences.
               My background includes financial systems, e-commerce, and solutions for businesses of all sizes.

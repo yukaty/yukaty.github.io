@@ -10,7 +10,7 @@ const Contact = () => {
     {
       name: 'Email',
       icon: 'bi-envelope',
-      url: 'mailto:yukat@example.com'
+      url: 'mailto:yukat.ca@gmail.com'
     },
     {
       name: 'LinkedIn',

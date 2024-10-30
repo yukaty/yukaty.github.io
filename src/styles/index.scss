@@ -43,11 +43,11 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--card-shadow);
 
   .nav-link {
-    color: var(--secondary);
+    color: var(--primary);
     transition: var(--transition);
 
     &:hover {
-      color: var(--primary);
+      color: var(--secondary);
     }
   }
 }
@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .social-icon {
   color: var(--secondary);
-  font-size: 1.5rem;
+  font-size: 2rem;
   transition: var(--transition);
 
   &:hover {
