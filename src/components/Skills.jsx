@@ -1,16 +1,13 @@
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
-const SkillCard = ({ title, skills, isBackend, icon }) => {
+const SkillCard = ({ title, skills, icon }) => {
   return (
     <Card className="h-100">
       <Card.Body>
         <div className="d-flex align-items-center mb-3">
-          <i className={`bi ${icon} me-2`}></i>
+          <i className={`bi ${icon} text-secondary fs-4 me-2`}></i>
           <Card.Title className="mb-0 h5 d-flex align-items-center">
             {title}
-            {isBackend && (
-              <i className="bi bi-bookmark-star-fill ms-2 special-badge"></i>
-            )}
           </Card.Title>
         </div>
         <div className="d-flex flex-wrap gap-2">
@@ -43,7 +40,6 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Backend Development",
-      isBackend: true,
       icon: "bi-gear-fill",
       skills: [
         "Java", "Python", "PHP", "Spring Boot", "Django", "Flask",

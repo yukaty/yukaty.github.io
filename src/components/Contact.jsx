@@ -20,13 +20,13 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-5 bg-light">
+    <section id="contact" className="py-5">
       <Container>
         <Row className="justify-content-center">
           <Col md={8} lg={6} className="text-center">
             <h2 className="display-6 mb-4">Get in Touch</h2>
             <p className="text-secondary mb-4">
-              Currently open to new opportunities.<br/>
+              Currently open to new opportunities.<br />
               Feel free to reach out for collaborations or just say hi!
             </p>
             <div className="d-flex justify-content-center gap-4">

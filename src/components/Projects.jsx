@@ -1,10 +1,25 @@
 import { Container, Row, Col, Card, Badge } from 'react-bootstrap';
-
 const ProjectCard = ({ title, description, tags, githubLink, demoLink }) => {
   return (
     <Card className="h-100">
       <Card.Body>
-        <Card.Title className="mb-3">{title}</Card.Title>
+        <Card.Title className="mb-3 d-flex justify-content-between">
+          <div className="d-flex">
+            {title}
+          </div>
+          <div className="d-flex">
+            {githubLink && (
+              <a href={githubLink} className="text-secondary" target="_blank" rel="noopener noreferrer">
+                <i className="bi bi-github fs-4"></i>
+              </a>
+            )}
+            {demoLink && (
+              <a href={demoLink} className="text-secondary" target="_blank" rel="noopener noreferrer">
+                <i className="bi bi-box-arrow-up-right fs-5"></i>
+              </a>
+            )}
+          </div>
+        </Card.Title>
         <Card.Text className="text-secondary mb-3">
           {description}
         </Card.Text>
@@ -19,18 +34,6 @@ const ProjectCard = ({ title, description, tags, githubLink, demoLink }) => {
             </Badge>
           ))}
         </div>
-        <div className="d-flex gap-2">
-          {githubLink && (
-            <a href={githubLink} className="text-secondary" target="_blank" rel="noopener noreferrer">
-              <i className="bi bi-github"></i>
-            </a>
-          )}
-          {demoLink && (
-            <a href={demoLink} className="text-secondary" target="_blank" rel="noopener noreferrer">
-              <i className="bi bi-box-arrow-up-right"></i>
-            </a>
-          )}
-        </div>
       </Card.Body>
     </Card>
   );
@@ -40,7 +43,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Clothing Recommendations API",
-      description: "AI-powered API that provides clothing suggestions based on weather conditions.",
+      description: "AI clothing suggestions service based on weather conditions.",
       tags: ["Python", "Flask", "OpenAI API"],
       githubLink: "https://github.com/yukaty/weather-wardrobe-ai"
     },
@@ -59,7 +62,7 @@ const Projects = () => {
     {
       title: "AI Chatbot App",
       description: "AI chatbot app with the BERT model.",
-      tags: ["Python", "Django", "React",, "BERT"],
+      tags: ["Python", "Django", "React", "BERT"],
       githubLink: "https://github.com/yukaty/chatbot-app"
     },
     {

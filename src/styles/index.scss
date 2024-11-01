@@ -8,9 +8,9 @@ $font-heading: 'Playfair Display', serif;
 
 // Light Mode (Default)
 :root {
-  --primary: #2D3047;    // Deep navy blue
-  --secondary: #7C90A0;  // Muted blue-gray
-  --accent: #B4C5E4;     // Soft periwinkle
+  --primary: #34426A; // Rich navy blue
+  --secondary: #718096; // Medium warm gray
+  --accent: #63B3ED; // Light blue
   --background: #F8F9FA;
   --card-shadow: 0 2px 4px rgba(45, 48, 71, 0.1);
   --transition: all 0.2s ease;
@@ -18,11 +18,11 @@ $font-heading: 'Playfair Display', serif;
 
 // Dark Mode
 [data-theme="dark"] {
-  --primary: #B4C5E4;
-  --secondary: #7C90A0;
-  --accent: #2D3047;
-  --background: #1A1B25;
-  --card-shadow: 0 2px 4px rgba(180, 197, 228, 0.1);
+  --primary: #A3B8E0; // Softer blue-white
+  --secondary: #8496AC; // Muted steel blue
+  --accent: #3E5C99; // Deep accent blue
+  --background: #1A1B26;
+  --card-shadow: 0 2px 4px rgba(163, 184, 224, 0.07);
 }
 
 // Base Styles
@@ -37,7 +37,61 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--primary);
 }
 
-// Custom Component Styles
+// Home Section
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  isolation: isolate;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-outline-glow {
+  position: relative;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  transition: all 0.3s ease;
+
+  .bi {
+    font-size: 1.25rem;
+    vertical-align: middle;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: var(--primary) !important;
+    border: 2px solid var(--primary) !important;
+    color: var(--background);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(45, 48, 71, 0.2);
+  }
+}
+
+// Navbar
 .navbar {
   background-color: var(--background);
   box-shadow: var(--card-shadow);
@@ -52,6 +106,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.navbar-toggler {
+  border: none;
+  color: var(--primary);
+  font-size: 2rem;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
 .theme-button {
   width: 40px;
   height: 40px;
@@ -63,24 +128,19 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  margin-left: 20px;
   transition: var(--transition);
 
   &:hover {
     background-color: var(--secondary);
   }
+
+  i {
+    font-size: 1.2rem;
+  }
 }
 
-.theme-button i {
-  font-size: 1.2rem;
-}
-
-.hero-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 80px 0;
-}
-
+// Additional Components
 .card {
   transition: var(--transition);
   border: none;
@@ -93,17 +153,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .skill-badge {
-  background-color: var(--accent);
-  color: var(--primary);
+  background-color: var(--primary);
+  color: var(--background);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
-}
-
-.special-badge {
-  color: #FFD700; // Gold
-  font-size: 1.2rem;
-  vertical-align: middle;
 }
 
 .social-icon {
@@ -114,6 +168,19 @@ h1, h2, h3, h4, h5, h6 {
   &:hover {
     color: var(--primary);
     transform: translateY(-2px);
+  }
+}
+
+// Responsive Adjustments
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: right;
+    margin-right: 20px;
+  }
+
+  .theme-button {
+    margin-top: 10px;
+    margin-left: auto;
   }
 }
 

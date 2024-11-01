@@ -7,7 +7,10 @@ const NavigationBar = ({ handleNavClick, theme, toggleTheme }) => {
         <Navbar.Brand href="#" className="fw-bold text-primary fs-2">
           YukaT
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <i className='bi bi-list text-primary'></i>
+        </Navbar.Toggle>
+
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link onClick={() => handleNavClick('about')}>About</Nav.Link>
@@ -16,7 +19,7 @@ const NavigationBar = ({ handleNavClick, theme, toggleTheme }) => {
             <Nav.Link onClick={() => handleNavClick('contact')}>Contact</Nav.Link>
             <button
               onClick={toggleTheme}
-              className="theme-button ms-2"
+              className="theme-button"
               aria-label="Toggle theme"
             >
               <i className={`bi ${theme === 'light' ? 'bi-sun' : 'bi-moon'}`}></i>

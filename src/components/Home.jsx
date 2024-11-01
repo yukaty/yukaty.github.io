@@ -4,19 +4,41 @@ const Home = ({ handleNavClick }) => {
   return (
     <section className="hero-section">
       <Container>
-        <Row className="align-items-center text-center">
-          <Col lg={8} className="mx-auto">
-            <h1 className="display-4 mb-3">Hello!</h1>
-            <p className="lead mb-4 text-secondary">
-              I'm Yuka Tamura, a Full Stack Developer based in Calgary, Canada. <br />I create seamless online experiences for everyone.
-            </p>
-            <div className="d-flex gap-3 justify-content-center">
-              <Button variant="outline-secondary" onClick={() => handleNavClick('projects')}>
-                View Projects
-              </Button>
-              <Button variant="outline-secondary" onClick={() => handleNavClick('contact')}>
-                Get in Touch
-              </Button>
+        <Row>
+          <Col lg={10} className="mx-auto text-center">
+            <div className="fade-in-up">
+              <h1 className="display-1 fw-bold mb-3">
+                <span className="gradient-text">Yuka Tamura</span>
+              </h1>
+              <div className="mb-5">
+                <p className="display-6 fw-bold text-primary mb-0">
+                  Full Stack Developer
+                </p>
+                <p className="fs-6 fw-light text-secondary mb-0">
+                  Based in Calgary, Canada
+                </p>
+              </div>
+              <p className="fs-5 fw-light text-secondary mb-5">
+                Crafting digital experiences with <span className="text-primary fw-medium">clean code</span> and <span className="text-primary fw-medium">thoughtful design</span>.
+              </p>
+              <div className="d-flex gap-4 justify-content-center">
+                <Button
+                  variant="outline-primary"
+                  className="btn-outline-glow d-flex align-items-center gap-2 px-3 py-2"
+                  onClick={() => handleNavClick('projects')}
+                >
+                  <i className="bi bi-code-square pe-1"></i>
+                  <span>View Projects</span>
+                </Button>
+                <Button
+                  variant="outline-primary"
+                  className="btn-outline-glow d-flex align-items-center gap-2 px-3 py-2"
+                  onClick={() => handleNavClick('contact')}
+                >
+                  <i className="bi bi-envelope pe-1"></i>
+                  <span>Get in Touch</span>
+                </Button>
+              </div>
             </div>
           </Col>
         </Row>

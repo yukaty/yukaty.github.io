@@ -6,13 +6,8 @@ const Footer = () => {
       <Container>
         <div className="text-center">
           <small className="text-secondary">
-            © {new Date().getFullYear()} YukaT. All rights reserved.
+            © {new Date().getFullYear()} Yuka Tamura
           </small>
-          <div className="mt-2">
-            <small className="text-secondary">
-              Built with React & Bootstrap
-            </small>
-          </div>
         </div>
       </Container>
     </footer>
