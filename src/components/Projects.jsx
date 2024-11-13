@@ -42,10 +42,22 @@ const ProjectCard = ({ title, description, tags, githubLink, demoLink }) => {
 const Projects = () => {
   const projects = [
     {
+      title: "Book Similarity Search API",
+      description: "FastAPI application for book similarity search using embeddings.",
+      tags: ["Python", "FastAPI", "PostgreSQL", "Docker", "OpenAI", "Ollama"],
+      githubLink: "https://github.com/yukaty/vector-search-api"
+    },
+    {
       title: "Clothing Recommendations API",
       description: "AI clothing suggestions service based on weather conditions.",
-      tags: ["Python", "Flask", "OpenAI API"],
-      githubLink: "https://github.com/yukaty/weather-wardrobe-ai"
+      tags: ["Python", "Flask", "OpenAI"],
+      githubLink: "https://github.com/yukaty/clothing-recommendations-api"
+    },
+    {
+      title: "Recipe API",
+      description: "API for managing recipes with Django, Docker, and CI/CD.",
+      tags: ["Python", "Django REST Framework", "PostgreSQL", "Docker"],
+      githubLink: "https://github.com/yukaty/django-recipe-api"
     },
     {
       title: "Restaurant Rating App",
@@ -55,28 +67,16 @@ const Projects = () => {
     },
     {
       title: "eCommerce Application",
-      description: "A complete eCommerce solution with modern architecture.",
-      tags: ["Java", "Spring Boot", "Angular", "MySQL", "Okta API"],
+      description: "A full-stack eCommerce solution with modern architecture.",
+      tags: ["Java", "Spring Boot", "Angular", "Bootstrap", "MySQL"],
       githubLink: "https://github.com/yukaty/full-stack-ecommerce"
     },
     {
       title: "AI Chatbot App",
       description: "AI chatbot app with the BERT model.",
-      tags: ["Python", "Django", "React", "BERT"],
+      tags: ["Python", "Django", "React", "Docker", "BERT"],
       githubLink: "https://github.com/yukaty/chatbot-app"
     },
-    {
-      title: "Restaurant Website",
-      description: "A responsive restaurant website with modern design.",
-      tags: ["Bootstrap", "JavaScript", "HTML/CSS"],
-      demoLink: "https://yukaty.github.io/demo-restaurant-website/"
-    },
-    {
-      title: "Tutor Portfolio Website",
-      description: "A clean and professional portfolio website for tutors.",
-      tags: ["Bootstrap", "JavaScript", "HTML/CSS"],
-      demoLink: "https://yukaty.github.io/demo-tutor-portfolio/"
-    }
   ];
 
   return (

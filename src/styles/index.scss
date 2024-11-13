@@ -8,21 +8,24 @@ $font-heading: 'Playfair Display', serif;
 
 // Light Mode (Default)
 :root {
-  --primary: #34426A; // Rich navy blue
-  --secondary: #718096; // Medium warm gray
-  --accent: #63B3ED; // Light blue
-  --background: #F8F9FA;
+  --primary: #34426A;    // Rich navy blue
+  --secondary: #718096;  // Medium warm gray
+  --accent: #63B3ED;     // Light blue
+  --background: #F8F9FA; // Light background
+  --card-bg: #FFFFFF;    // White
   --card-shadow: 0 2px 4px rgba(45, 48, 71, 0.1);
   --transition: all 0.2s ease;
 }
 
 // Dark Mode
 [data-theme="dark"] {
-  --primary: #A3B8E0; // Softer blue-white
-  --secondary: #8496AC; // Muted steel blue
-  --accent: #3E5C99; // Deep accent blue
-  --background: #1A1B26;
-  --card-shadow: 0 2px 4px rgba(163, 184, 224, 0.07);
+  --primary: #CCD6E9;    // Light blue-white
+  --secondary: #94A3BC;  // Muted steel blue
+  --accent: #5B8BE5;     // Deep accent blue
+  --background: #13141C; // Dark background
+  --card-bg: #1E202C;    // Dark Navy
+  --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --transition: all 0.2s ease;
 }
 
 // Base Styles
@@ -140,22 +143,31 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// Additional Components
+// Card Components
 .card {
+  background-color: var(--card-bg);
+  color: var(--primary);
   transition: var(--transition);
   border: none;
   box-shadow: var(--card-shadow);
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(45, 48, 71, 0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
 }
 
-.skill-badge {
+.badge {
   background-color: var(--primary);
+  color: var(--card-bg);
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.skill-badge {
+  background-color: var(--secondary);
   color: var(--background);
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
 }
