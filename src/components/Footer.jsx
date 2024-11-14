@@ -1,15 +1,12 @@
-import { Container } from 'react-bootstrap';
-
 const Footer = () => {
+
   return (
-    <footer className="py-4 bg-dark text-light">
-      <Container>
-        <div className="text-center">
-          <small className="text-secondary">
-            © {new Date().getFullYear()} Yuka Tamura
-          </small>
+    <footer className="py-6 bg-light-primary dark:bg-dark-bg text-light-bg dark:text-dark-secondary">
+      <div className="container mx-auto px-4">
+        <div className="text-center text-sm">
+          © {new Date().getFullYear()} Yuka Tamura
         </div>
-      </Container>
+      </div>
     </footer>
   );
 };
