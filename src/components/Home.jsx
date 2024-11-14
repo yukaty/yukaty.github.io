@@ -1,50 +1,71 @@
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import React from 'react';
+import { Icons } from '../utils/icons';
 
 const Home = ({ handleNavClick }) => {
   return (
-    <section className="hero-section">
-      <Container>
-        <Row>
-          <Col lg={10} className="mx-auto text-center">
-            <div className="fade-in-up">
-              <h1 className="display-1 fw-bold mb-3">
-                <span className="gradient-text">Yuka Tamura</span>
-              </h1>
-              <div className="mb-5">
-                <p className="display-6 fw-bold text-primary mb-0">
-                  Full Stack Developer
-                </p>
-                <p className="fs-6 fw-light text-secondary mb-0">
-                  Based in Calgary, Canada
-                </p>
-              </div>
-              <p className="fs-5 fw-light text-secondary mb-5">
-                Crafting digital experiences with <span className="text-primary fw-medium">clean code</span> and <span className="text-primary fw-medium">thoughtful design</span>.
+    <section className="min-h-screen flex items-center">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="fade-in-up space-y-8">
+
+            <h1 className="text-6xl md:text-7xl font-heading font-bold">
+              <span className="gradient-text">Yuka Tamura</span>
+            </h1>
+
+            <div className="space-y-1">
+              <p className="text-3xl font-bold text-light-primary dark:text-dark-primary">
+                Full Stack Developer
               </p>
-              <div className="d-flex gap-4 justify-content-center">
-                <Button
-                  variant="outline-primary"
-                  className="btn-outline-glow d-flex align-items-center gap-2 px-3 py-2"
-                  onClick={() => handleNavClick('projects')}
-                >
-                  <i className="bi bi-code-square pe-1"></i>
-                  <span>View Projects</span>
-                </Button>
-                <Button
-                  variant="outline-primary"
-                  className="btn-outline-glow d-flex align-items-center gap-2 px-3 py-2"
-                  onClick={() => handleNavClick('contact')}
-                >
-                  <i className="bi bi-envelope pe-1"></i>
-                  <span>Get in Touch</span>
-                </Button>
-              </div>
+              <p className="text-sm font-light text-light-secondary dark:text-dark-secondary">
+                Based in Calgary, Canada
+              </p>
             </div>
-          </Col>
-        </Row>
-      </Container>
+
+            <p className="text-xl font-light text-light-secondary dark:text-dark-secondary">
+              Crafting digital experiences with{' '}
+              <span className="text-light-primary dark:text-dark-primary font-medium">
+                clean code
+              </span>{' '}
+              and{' '}
+              <span className="text-light-primary dark:text-dark-primary font-medium">
+                thoughtful design
+              </span>
+              .
+            </p>
+
+            <div className="flex flex-wrap gap-4 justify-center">
+              <ActionButton
+                icon={<Icons.Github size={20} />}
+                text="View Projects"
+                onClick={() => handleNavClick('projects')}
+              />
+              <ActionButton
+                icon={<Icons.Email size={20} />}
+                text="Get in Touch"
+                onClick={() => handleNavClick('contact')}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
+
+const ActionButton = ({ icon, text, onClick }) => (
+  <button
+    onClick={onClick}
+    className="group flex items-center gap-2 px-6 py-2.5 border-2 border-light-primary
+               dark:border-dark-primary text-light-primary dark:text-dark-primary
+               hover:bg-light-primary dark:hover:bg-dark-primary hover:text-light-bg
+               dark:hover:text-dark-bg transition-all duration-300 transform
+               hover:-translate-y-0.5 hover:shadow-lg rounded-lg"
+  >
+    <span className="group-hover:scale-110 transition-transform duration-300">
+      {icon}
+    </span>
+    <span>{text}</span>
+  </button>
+);
 
 export default Home;

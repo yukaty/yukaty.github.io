@@ -1,107 +1,84 @@
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Icons } from '../utils/icons';
 
-const SkillCard = ({ title, skills, icon }) => {
+const SkillCard = ({ title, skills, icon: Icon }) => {
   return (
-    <Card className="h-100">
-      <Card.Body>
-        <div className="d-flex align-items-center mb-3">
-          <i className={`bi ${icon} text-secondary fs-4 me-2`}></i>
-          <Card.Title className="mb-0 h5 d-flex align-items-center">
-            {title}
-          </Card.Title>
-        </div>
-        <div className="d-flex flex-wrap gap-2">
-          {skills.map((skill, index) => (
-            <span
-              key={index}
-              className="skill-badge"
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
-      </Card.Body>
-    </Card>
+    <div className="bg-light-card dark:bg-dark-card rounded-lg shadow-light dark:shadow-dark p-6 h-full">
+      <div className="flex items-center gap-3 mb-6">
+        <Icon className="text-2xl text-light-primary dark:text-dark-primary" />
+        <h3 className="text-xl font-medium text-light-primary dark:text-dark-primary">
+          {title}
+        </h3>
+      </div>
+      <div className="flex flex-wrap gap-2">
+        {skills.map((skill) => (
+          <span
+            key={skill.name}
+            className="px-3 py-1.5 rounded-full bg-light-secondary/10 dark:bg-dark-secondary/10
+                     text-light-secondary dark:text-dark-secondary flex items-center gap-2"
+          >
+            {skill.icon}
+            {skill.name}
+          </span>
+        ))}
+      </div>
+    </div>
   );
 };
-
-const CertificationBadge = ({ title, icon }) => (
-  <Card className="mb-2">
-    <Card.Body className="py-2">
-      <div className="d-flex align-items-center">
-        <i className={`bi ${icon} me-3 fs-4`}></i>
-        <span className="fw-medium">{title}</span>
-      </div>
-    </Card.Body>
-  </Card>
-);
 
 const Skills = () => {
   const skillCategories = [
     {
       title: "Backend Development",
-      icon: "bi-gear-fill",
+      icon: Icons.Server,
       skills: [
-        "Java", "Python", "PHP", "Spring Boot", "Django", "Flask",
-        "MySQL", "MongoDB",
+        { name: "Java", icon: <Icons.Java /> },
+        { name: "Python", icon: <Icons.Python /> },
+        { name: "PHP", icon: <Icons.PHP /> },
+        { name: "Spring Boot", icon: <Icons.Spring /> },
+        { name: "Django", icon: <Icons.Django /> },
+        { name: "FastAPI", icon: <Icons.FastAPI /> },
+        { name: "MySQL", icon: <Icons.MySQL /> },
+        { name: "PostgreSQL", icon: <Icons.PostgreSQL /> },
       ]
     },
     {
       title: "Frontend Development",
-      icon: "bi-laptop-fill",
+      icon: Icons.Laptop,
       skills: [
-        "HTML5", "CSS3", "Bootstrap", "SASS",
-        "JavaScript", "React", "Angular",
+        { name: "HTML5", icon: <Icons.HTML5 /> },
+        { name: "CSS3", icon: <Icons.CSS3 /> },
+        { name: "Bootstrap", icon: <Icons.Bootstrap /> },
+        { name: "Tailwind CSS", icon: <Icons.Tailwind /> },
+        { name: "JavaScript", icon: <Icons.JavaScript /> },
+        { name: "React", icon: <Icons.React /> },
       ]
     },
     {
       title: "DevOps & Cloud",
-      icon: "bi-cloud-fill",
+      icon: Icons.Cloud,
       skills: [
-        "AWS", "Azure", "Linux", "Docker",
-        "Git/GitHub", "GitHub Actions",
+        { name: "AWS", icon: <Icons.AWS /> },
+        { name: "Azure", icon: <Icons.Azure /> },
+        { name: "Linux", icon: <Icons.Linux /> },
+        { name: "Docker", icon: <Icons.Docker /> },
+        { name: "Git/GitHub", icon: <Icons.Github /> },
+        { name: "GitHub Actions", icon: <Icons.GithubActions /> },
       ]
     },
   ];
 
-  const certifications = [
-    {
-      title: "AWS Certified Developer",
-      icon: "bi-cloud-check-fill"
-    },
-    {
-      title: "Certified Azure DevOps Engineer",
-      icon: "bi-microsoft"
-    },
-    {
-      title: "Professional Scrum Master",
-      icon: "bi-award-fill"
-    }
-  ];
-
   return (
-    <section id="skills" className="py-5">
-      <Container>
-        <h2 className="display-6 mb-4">Skills</h2>
-
-        <Row className="g-4 mb-5">
+    <section id="skills" className="py-20">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-heading text-light-primary dark:text-dark-primary mb-10">
+          Skills
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
-            <Col key={index} md={6} lg={4}>
-              <SkillCard {...category} />
-            </Col>
+            <SkillCard key={index} {...category} />
           ))}
-        </Row>
-
-        {/* <Row className="justify-content-center">
-          <Col md={8} lg={6}>
-            <h3 className="h4 mb-3">
-            Certifications</h3>
-            {certifications.map((cert, index) => (
-              <CertificationBadge key={index} {...cert} />
-            ))}
-          </Col>
-        </Row> */}
-      </Container>
+        </div>
+      </div>
     </section>
   );
 };

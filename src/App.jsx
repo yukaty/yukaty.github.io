@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavigationBar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
@@ -10,10 +10,17 @@ import Footer from './components/Footer';
 const App = () => {
   const [theme, setTheme] = useState('light');
 
+  useEffect(() => {
+    // Apply theme on initial load
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+  }, [theme]);
+
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    document.documentElement.setAttribute('data-theme', newTheme);
+    setTheme(prevTheme => {
+      const newTheme = prevTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.classList.toggle('dark');
+      return newTheme;
+    });
   };
 
   const handleNavClick = (sectionId) => {
@@ -26,7 +33,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="min-h-screen bg-light-bg dark:bg-dark-bg transition-colors duration-200">
       <NavigationBar handleNavClick={handleNavClick} theme={theme} toggleTheme={toggleTheme} />
       <Home handleNavClick={handleNavClick} />
       <About />
