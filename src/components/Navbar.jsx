@@ -8,10 +8,9 @@ const NavigationBar = ({ handleNavClick, theme, toggleTheme }) => {
     <nav className="fixed top-0 w-full bg-light-bg dark:bg-dark-bg shadow-light dark:shadow-dark transition-colors duration-200 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <a href="#" className="text-3xl font-bold text-light-primary dark:text-dark-primary">
+          <a href="/" className="text-3xl font-extrabold text-light-primary dark:text-dark-primary">
             YukaT
           </a>
-
           <div className="flex items-center gap-4 lg:hidden">
             <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
             <button
