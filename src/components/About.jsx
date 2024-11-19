@@ -9,17 +9,17 @@ const About = () => {
         </h2>
         <div className="max-w-3xl text-light-secondary dark:text-dark-secondary ">
           <p className="text-xl mb-5">
-          I'm a Full-stack Developer passionate about efficient, user-focused solutions.
-          My background spans financial systems, large-scale e-commerce, educational platforms,
-          and various projects for businesses of all sizes.
+          I&apos;m a Full-stack Developer passionate about efficient, user-focused solutions.
+          My background spans financial systems, scalable e-commerce platforms, and various applications,
+          helping businesses of all sizes.
           </p>
           <p className="text-xl mb-5">
           Originally from Japan and now based in Canada, I bring both technical expertise
-          and multicultural perspective to every project. Being Deaf, I enjoy inclusive environments
-          where innovation flourishes through clear written communication and modern tools.
+          and multicultural perspective to my work. Being Deaf, I enjoy working in inclusive teams
+          with clear written communication and modern tools.
           </p>
           <p className="text-xl">
-          Always learning and evolving 🤟🏻
+          I&apos;ve been exploring AI and modern web development lately. Always learning.
           </p>
         </div>
       </div>
