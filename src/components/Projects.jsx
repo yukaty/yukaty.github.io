@@ -1,9 +1,9 @@
 import React from "react";
-import { Icons } from '../utils/icons';
+import { Icons } from "../utils/icons";
 
 const ProjectCard = ({ title, description, tags, githubLink, demoLink }) => {
   return (
-    <div className="bg-light-card dark:bg-dark-card rounded-lg shadow-light dark:shadow-dark transition-all duration-200 h-full hover:-translate-y-1 hover:shadow-lg">
+    <div className="bg-light-card dark:bg-dark-card rounded-lg shadow-light dark:shadow-dark h-full">
       <div className="p-6">
         <div className="flex justify-between items-start mb-4">
           <h3 className="text-xl font-medium text-light-primary dark:text-dark-primary">
@@ -54,41 +54,45 @@ const ProjectCard = ({ title, description, tags, githubLink, demoLink }) => {
 const Projects = () => {
   const projects = [
     {
-      title: "Book Similarity Search API",
+      title: "Tech Trend Tracker",
       description:
-        "FastAPI application for searching similar books based on embeddings.",
-      tags: ["Python", "FastAPI", "PostgreSQL", "Docker", "OpenAI", "Ollama"],
-      githubLink: "https://github.com/yukaty/vector-search-api",
+        "AI-powered application that tracks and summarizes technology trends from news articles using RAG.",
+      tags: ["Next.js", "Python", "FastAPI", "PostgreSQL", "OpenAI", "Docker"],
+      githubLink: "https://github.com/yukaty/tech-trend-tracker",
     },
+    // {
+    //   title: "AI FAQ Agent",
+    //   description:
+    //     "AI-powered FAQ agent that answers user questions from a knowledge base using embeddings and RAG, built with FastAPI, LangChain, and CrewAI.",
+    //   tags: ["Python", "FastAPI", "OpenAI", "LangChain", "FAISS", "CrewAI"],
+    //   githubLink: "",
+    // },
+    // {
+    //   title: "Modern eCommerce with Next.js",
+    //   description:
+    //     "Full-stack eCommerce application with Stripe payments and responsive design.",
+    //   tags: ["Next.js", "TypeScript", "Tailwind","PostgreSQL", "Stripe"],
+    //   githubLink: "https://github.com/yukaty/nextjs-ecommerce"
+    // },
     {
-      title: "Clothing Recommendations API",
-      description: "AI-powered clothing recommendation service based on weather conditions.",
-      tags: ["Python", "Flask", "OpenAI"],
-      githubLink: "https://github.com/yukaty/clothing-recommendations-api",
+      title: "eCommerce with Next.js + Go",
+      description:
+        "Scalable eCommerce system with Next.js frontend and Go backend, deployed on Cloud Run.",
+      tags: ["Next.js", "Go", "Google Cloud", "CI/CD", "Docker", "Stripe"],
+      githubLink: "https://github.com/yukaty/golang-nextjs-ecommerce",
     },
-    {
-      title: "Recipe API",
-      description: "API for managing and sharing recipes with Django, Docker, and CI/CD.",
-      tags: ["Python", "Django REST Framework", "PostgreSQL", "Docker", "GitHub Actions"],
-      githubLink: "https://github.com/yukaty/django-recipe-api",
-    },
+    // {
+    //   title: "Multilingual Event Platform",
+    //   description: "An event invitation platform supporting multiple languages with Stripe integration.",
+    //   tags: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "Tailwind CSS"],
+    //   githubLink: "https://github.com/yukaty/multilingual-event-platform",
+    // },
     {
       title: "Restaurant Review & Reservation",
-      description: "A full-stack app for restaurant reviews and reservations with Stripe integration.",
-      tags: ["Java", "Spring Boot", "MySQL", "Bootstrap"],
+      description:
+        "A full-stack app with Stripe integration including subscription management.",
+      tags: ["Java", "Spring Boot", "MySQL", "Stripe"],
       githubLink: "https://github.com/yukaty/restaurant-review-app",
-    },
-    {
-      title: "eCommerce Application",
-      description: "A full-stack eCommerce solution featuring Stripe payments and Okta authentication.",
-      tags: ["Java", "Spring Boot", "Angular", "Bootstrap", "MySQL"],
-      githubLink: "https://github.com/yukaty/full-stack-ecommerce",
-    },
-    {
-      title: "AI Chatbot App",
-      description: "AI chatbot app powered by the BERT model for natural language understanding.",
-      tags: ["Python", "Django", "React", "Docker", "BERT"],
-      githubLink: "https://github.com/yukaty/chatbot-app",
     },
   ];
 

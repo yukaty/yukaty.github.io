@@ -9,11 +9,6 @@ const Contact = () => {
       url: 'https://github.com/yukaty'
     },
     {
-      name: 'Email',
-      icon: <Icons.Email size={40} />,
-      url: 'mailto:yukat.ca@gmail.com'
-    },
-    {
       name: 'LinkedIn',
       icon: <Icons.Linkedin size={40} />,
       url: 'https://linkedin.com/in/yuka-tamura'
@@ -28,7 +23,7 @@ const Contact = () => {
             Get in Touch
           </h2>
           <p className="text-light-secondary dark:text-dark-secondary mb-8">
-            Currently open to new opportunities.<br />
+            Open to new opportunities.<br />
             Feel free to reach out for collaborations or just say hi!
           </p>
           <div className="flex justify-center gap-6">

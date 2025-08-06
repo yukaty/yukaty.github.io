@@ -2,14 +2,10 @@
 
 <!-- > 🚧 **Work in Progress** -->
 
-My portfolio website with clean and modern technologies that is both responsive and high-performance.
-
-## Tech Stack
-- **React**: High maintainable frontend development
-- **Vite**: Fast build tool for efficient development
-- **Tailwind CSS**: Utility-first CSS framework
+Clean and minimal portfolio website built with React, Vite, and Tailwind CSS.
 
 ## Setup
+
 ```bash
 # Install dependencies
 npm install

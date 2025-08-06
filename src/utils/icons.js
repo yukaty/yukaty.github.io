@@ -3,14 +3,9 @@ import { MdEmail } from "react-icons/md";
 import {
   FaLaptopCode,
   FaServer,
-  FaReact,
   FaCloud,
   FaJava,
   FaPython,
-  FaPhp,
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
   FaAws,
   FaDocker,
   FaGithub,
@@ -18,17 +13,17 @@ import {
   FaExternalLinkAlt,
 } from "react-icons/fa";
 import {
+  SiTypescript,
+  SiJavascript,
+  SiNextdotjs,
+  SiReact,
   SiTailwindcss,
   SiSpring,
-  SiDjango,
   SiFastapi,
-  SiMysql,
-  SiPostgresql,
-  SiBootstrap,
-  SiMicrosoftazure,
   SiLinux,
-  SiGithubactions
 } from "react-icons/si";
+import { FaGolang } from "react-icons/fa6";
+import { VscAzure } from "react-icons/vsc";
 
 export const Icons = {
   // General
@@ -46,21 +41,16 @@ export const Icons = {
   // Skills
   Java: FaJava,
   Python: FaPython,
-  PHP: FaPhp,
+  Go: FaGolang,
   Spring: SiSpring,
-  Django: SiDjango,
   FastAPI: SiFastapi,
-  MySQL: SiMysql,
-  PostgreSQL: SiPostgresql,
-  HTML5: FaHtml5,
-  CSS3: FaCss3Alt,
-  Bootstrap: SiBootstrap,
   Tailwind: SiTailwindcss,
-  JavaScript: FaJs,
-  React: FaReact,
+  TypeScript: SiTypescript,
+  JavaScript: SiJavascript,
+  NextJS: SiNextdotjs,
+  React: SiReact,
   AWS: FaAws,
-  Azure: SiMicrosoftazure,
+  Azure: VscAzure,
   Linux: SiLinux,
   Docker: FaDocker,
-  GithubActions: SiGithubactions,
 };

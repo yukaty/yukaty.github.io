@@ -1,4 +1,4 @@
-import { Icons } from '../utils/icons';
+import { Icons } from "../utils/icons";
 
 const SkillCard = ({ title, skills, icon: Icon }) => {
   return (
@@ -33,25 +33,21 @@ const Skills = () => {
       skills: [
         { name: "Java", icon: <Icons.Java /> },
         { name: "Python", icon: <Icons.Python /> },
-        { name: "PHP", icon: <Icons.PHP /> },
+        { name: "Go", icon: <Icons.Go /> },
         { name: "Spring Boot", icon: <Icons.Spring /> },
-        { name: "Django", icon: <Icons.Django /> },
         { name: "FastAPI", icon: <Icons.FastAPI /> },
-        { name: "MySQL", icon: <Icons.MySQL /> },
-        { name: "PostgreSQL", icon: <Icons.PostgreSQL /> },
-      ]
+      ],
     },
     {
       title: "Frontend Development",
       icon: Icons.Laptop,
       skills: [
-        { name: "HTML5", icon: <Icons.HTML5 /> },
-        { name: "CSS3", icon: <Icons.CSS3 /> },
-        { name: "Bootstrap", icon: <Icons.Bootstrap /> },
-        { name: "Tailwind CSS", icon: <Icons.Tailwind /> },
+        { name: "TypeScript", icon: <Icons.TypeScript /> },
         { name: "JavaScript", icon: <Icons.JavaScript /> },
+        { name: "Next.js", icon: <Icons.NextJS /> },
         { name: "React", icon: <Icons.React /> },
-      ]
+        { name: "Tailwind", icon: <Icons.Tailwind /> },
+      ],
     },
     {
       title: "DevOps & Cloud",
@@ -61,9 +57,8 @@ const Skills = () => {
         { name: "Azure", icon: <Icons.Azure /> },
         { name: "Linux", icon: <Icons.Linux /> },
         { name: "Docker", icon: <Icons.Docker /> },
-        { name: "Git/GitHub", icon: <Icons.Github /> },
-        { name: "GitHub Actions", icon: <Icons.GithubActions /> },
-      ]
+        { name: "CI/CD", icon: <Icons.Github /> },
+      ],
     },
   ];
 
